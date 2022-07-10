@@ -26,8 +26,12 @@ body {
   box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
   border-radius: 50%;
   width: 48px;
+<<<<<<< HEAD
   height:  48px;
   flex-shrink: 0;
+=======
+  height: 48px;
+>>>>>>> 3b4ebbf (Removed extra space from style.css)
 }
 
 .logo {
