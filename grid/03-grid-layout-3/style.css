@@ -105,6 +105,7 @@ ul {
 .menu > ul,
 .nav > ul {
   display: grid;
+  grid-auto-flow: column;
 }
 
 .container {
@@ -124,10 +125,6 @@ ul {
   text-align: left;
 }
 
-.menu > ul {
-  grid-auto-flow: column;
-}
-
 .sidebar {
   display: grid;
   grid-row: 2 / span 2;
@@ -137,6 +134,11 @@ ul {
 .sidebar > div {
   display: grid;
   place-items: center;
+}
+
+.nav > ul {
+  height: 100%;
+  align-items: center;
 }
 
 .article {
