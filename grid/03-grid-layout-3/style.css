@@ -89,3 +89,20 @@
   font-size: 13px;
   font-weight: normal;  
 }
+
+/* ----- SOLUTION ----- */
+
+html,
+body,
+.container {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template: 180px 100px 1fr 140px / 1fr 4fr;
+}
+
+.container > div {
+  overflow: hidden;
+}
