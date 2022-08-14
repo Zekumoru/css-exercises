@@ -98,9 +98,19 @@ body,
   height: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.menu > ul,
+.nav > ul {
+  display: grid;
+}
+
 .container {
   display: grid;
   grid-template: 180px 100px 1fr 140px / 1fr 4fr;
+  gap: 4px;
 }
 
 .header {
@@ -108,7 +118,14 @@ body,
 }
 
 .sidebar {
+  display: grid;
   grid-row: 2 / span 2;
+  gap: 50px;
+}
+
+.sidebar > div {
+  display: grid;
+  place-items: center;
 }
 
 .article {
