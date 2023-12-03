@@ -6,6 +6,7 @@
   font-size: 15px;
   color: rgb(247, 247, 247);
   cursor: pointer;
+  position: relative;
 }
 
 .menu-title {
@@ -17,8 +18,15 @@
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
   display: none;
+
+  animation: 0.3s ease-out 0s slideOut;
+  animation-fill-mode: forwards;
+  transform-origin: top;
+
+  /* Make sure it doesn't cause a re-layout/repaint */
+  position: absolute;
+  width: 100%;
 }
 
 ul.dropdown-menu li:hover {
@@ -29,4 +37,30 @@ ul.dropdown-menu li:hover {
   display: block;
 }
 
+.dropdown-menu.visible {
+  animation-name: slideIn;
+}
 
+@keyframes slideIn {
+  from {
+    transform: scaleY(0);
+  }
+  70% {
+    transform: scaleY(1.2);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: scaleY(1);
+    display: block;
+  }
+
+  to {
+    transform: scaleY(0);
+    display: none;
+  }
+}
